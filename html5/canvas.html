@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio de canvas</title>
+    <style>
+        #canvas{
+            border: dotted 3px black;
+            background: green ;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var canvas = document.getElementById("canvas");
+            if (canvas && canvas.getContext){
+                var ctx = canvas.getContext("2d");
+                if (ctx){
+                    //definicion de los colores
+                    ctx.fillStyle = "yellow";
+                    ctx.strokeStyle = "#FF0000";
+                    ctx.lineWidth =2;
+                    ctx.fillRect(60,60,100,100);
+                    ctx.strokeRect(60,60,100,100)
+                }
+                alert('entre al contexto')
+            }
+            //canvas.width = 100;
+        }
+    </script>
+</head>
+<body>
+<h1>Ejercicio con canvas</h1>
+<canvas id="canvas" width="500px" height="300px"></canvas>
+</body>
+</html>
