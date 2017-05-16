@@ -16,11 +16,25 @@
                 var ctx = canvas.getContext("2d");
                 if (ctx){
                     //definicion de los colores
-                    ctx.fillStyle = "yellow";
-                    ctx.strokeStyle = "#FF0000";
+                    ctx.fillStyle = "yellow";//RELLENO
+                    ctx.strokeStyle = "#FF0000";//CONTORNO
                     ctx.lineWidth =2;
-                    ctx.fillRect(60,60,100,100);
-                    ctx.strokeRect(60,60,100,100)
+
+                    //DIBUJANDO COMO UN MISMO OBJETO EN UN SOLO LUGAR
+                    ctx.fillRect(60,60,100,100);//DIBUJANDO UN RECTANGULO
+                    ctx.strokeRect(60,60,100,100)  //DIBUJANDO EL CONTORNO
+
+                    //DIBUJANDO EN OTRO LUGAR
+                    ctx.strokeRect(160,160,200,100)  //DIBUJANDO EL CONTORNO
+
+                    //DIBUJANDO RECTANGULO DE TRANSPARENCIA
+                    ctx.fillStyle = "rgba(250,0,0,0.3)";//RELLENO TRANSPARENTE
+                    ctx.fillRect(200,60,100,100);//DIBUJANDO UN RECTANGULO
+                    ctx.strokeStyle = "BLACK";//CONTORNO
+                    ctx.strokeRect(200,60,100,100);//CONTORNO
+
+
+
                 }
                 alert('entre al contexto')
             }
